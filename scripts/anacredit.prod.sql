@@ -1,0 +1,11 @@
+use anacredit
+
+select *
+FROM Anacredit.dbo.IFD_SUB A
+WHERE A.OBS_A_ID = 'GR011' AND A.REF_DT='2023-11-30' --AND A.SOURCE_SYSTEM_ID IN ('INSTI_1','INSTI_2','INSTI_3','INSTU_1','INSTU_2','INSTU_3')
+and A.ACC_ID='519897'
+
+select *
+FROM Anacredit.dbo.IFD_SUB A
+where A.OBS_A_ID = 'GR011' AND A.REF_DT='2024-03-31'
+and instst is null --AND A.SOURCE_SYSTEM_ID IN ('INSTI_1','INSTI_2','INSTI_3','INSTU_1','INSTU_2','INSTU_3')
