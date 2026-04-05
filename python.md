@@ -34,3 +34,35 @@ with open(filename, "r", encoding="utf-8") as f:
 
 print(content)
 ```
+
+# Loops
+- Με for από 0 έως 9:
+```
+for x in range(10)
+    print(x)
+```
+- Με while:
+```
+x = 0
+while x < 10:
+    print(x)
+    x += 1
+```
+
+# Arrays
+```
+names = []
+ages = []
+names.append("George")
+ages.append(46)
+names.append("Theo")
+ages.append(14)
+names.append("Nick")
+ages.append(13)
+print("Names:", names)
+print("Ages:", ages)
+x = 0
+for name in names:
+    print(f"Hello {name}, you are {ages[x]} years old.")
+    x += 1
+```
