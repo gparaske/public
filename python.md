@@ -50,6 +50,7 @@ while x < 10:
 ```
 
 # Arrays
+- Append σε λίστα:
 ```
 names = []
 ages = []
@@ -65,4 +66,14 @@ x = 0
 for name in names:
     print(f"Hello {name}, you are {ages[x]} years old.")
     x += 1
+```
+- Join με delimeter αλφαριθμητικά ή αριθμοί:
+```
+join = ";".join(names)
+join = ";".join(map(str, ages))
+```
+- Split με delimeter:
+```
+text = "George;Theodore;Nick"
+names = text.split(";")
 ```
