@@ -7,6 +7,7 @@ i = 123.45
 - Ορισμός Αλφαριθμητικού (Alphanumeric - String):  
 ```
 name = "Alice"
+name = input("Πώς σε λένε; ")
 ```
 - Μετατροπή Αριθμού σε String και Concat:  
 ```
