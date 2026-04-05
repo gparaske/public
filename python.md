@@ -54,18 +54,28 @@ while x < 10:
 ```
 names = []
 ages = []
-names.append("George")
-ages.append(46)
-names.append("Theo")
-ages.append(14)
-names.append("Nick")
-ages.append(13)
-print("Names:", names)
-print("Ages:", ages)
-x = 0
-for name in names:
-    print(f"Hello {name}, you are {ages[x]} years old.")
-    x += 1
+
+# names.append("George")
+# ages.append(46)
+# names.append("Theodore")
+# ages.append(14)
+# names.append("Nick")
+# ages.append(13)
+
+running = True
+while running:
+    name = input("Enter a name (or Enter for exit): ")
+    if name == "":
+        running = False
+        continue
+    age = input("Enter an age: ")
+
+    names.append(name)
+    ages.append(age)
+
+for x in range(len(names)):
+    print(names[x])
+    print(ages[x])
 ```
 - Join με delimeter αλφαριθμητικά ή αριθμοί:
 ```
