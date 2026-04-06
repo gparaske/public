@@ -144,3 +144,20 @@ while running:
     clock.tick(60)
 ...
 ```
+
+# Collision Detection
+```
+player = pygame.Rect(100, 100, 40, 40)
+blocks = [
+    pygame.Rect(100, 200, 40, 40),
+    pygame.Rect(140, 200, 40, 40),
+    pygame.Rect(180, 200, 40, 40),
+]
+
+if player.collidelist(blocks) != -1:
+    print("Το block ακούμπησε κάτι από κάτω!")
+
+hits = player.collidelistall(blocks)
+if hits:
+    print("Συγκρούστηκε με:", hits)
+```
