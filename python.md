@@ -96,7 +96,7 @@ pygame.init()
 
 # Δημιουργία παραθύρου
 screen = pygame.display.set_mode((400, 400))
-pygame.display.set_caption("Τετράγωνο")
+pygame.display.set_caption("Τίτλος Παραθύρου")
 
 # Συντεταγμένες του τετραγώνου
 x = 150
@@ -107,7 +107,7 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    
+
         # Έλεγχος πληκτρολογίου
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
