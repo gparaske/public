@@ -87,3 +87,43 @@ join = ";".join(map(str, ages))
 text = "George;Theodore;Nick"
 names = text.split(";")
 ```
+
+# Graphics
+```
+import pygame
+
+pygame.init()
+
+# Δημιουργία παραθύρου
+screen = pygame.display.set_mode((400, 400))
+pygame.display.set_caption("Τετράγωνο")
+
+# Συντεταγμένες του τετραγώνου
+x = 150
+y = 150
+
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    
+        # Έλεγχος πληκτρολογίου
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                x -= 20
+            if event.key == pygame.K_RIGHT:
+                x += 20
+            if event.key == pygame.K_ESCAPE:
+                running = False
+
+    # Γέμισμα φόντου
+    screen.fill((30, 30, 30))
+
+    # Ζωγραφίζω ένα τετράγωνο (x, y, width, height)
+    pygame.draw.rect(screen, (0, 200, 255), (x, y, 100, 100))
+
+    pygame.display.flip()
+
+pygame.quit()
+```
