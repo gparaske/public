@@ -127,3 +127,20 @@ while running:
 
 pygame.quit()
 ```
+
+# Timer
+```
+clock = pygame.time.Clock()
+speed = 0.5  # δευτερόλεπτα
+# Δημιουργώ custom event
+DROP_EVENT = pygame.USEREVENT + 1
+pygame.time.set_timer(DROP_EVENT, int(speed * 1000))  # ms
+...
+while running:
+    ...
+        if event.type == DROP_EVENT:
+            y += 20   # πέφτει 20 pixels
+    ...
+    clock.tick(60)
+...
+```
